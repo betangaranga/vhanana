@@ -7,4 +7,4 @@ var port = process.env.PORT || 5000;
 app.listen(port);
 console.log('server started '+ port);
 server.listen(process.env.PORT || port)
-
+log.Fatal(http.ListenAndServe(":" + os.Getenv("PORT"), router))
