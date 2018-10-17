@@ -15,8 +15,8 @@ let router= new Router({
 
       path: '/Home',
       name: 'Home',
-      component: Home,
-      children: [
+      component:Home,
+          children: [
 
         {
         path: "Catalogo",
