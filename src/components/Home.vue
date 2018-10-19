@@ -1,53 +1,104 @@
 <template>
- <div class="page-container">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-
-    <md-app>
-      <md-app-toolbar class="md-primary">
-        <span class="md-title">Transportes Hanan</span>
-      </md-app-toolbar>
-
-      <md-app-drawer md-permanent="full">
-        <md-toolbar class="md-transparent" md-elevation="0">
-          Menu
-        </md-toolbar>
-
-        <md-list>
-          <md-list-item>
-            <md-icon class="fa fa-car"></md-icon>
-            <span class="md-list-item-text"><router-link to="/Home/Catalogo">Catalogo</router-link></span>
-          </md-list-item>
-
-          <md-list-item>
-            <md-icon class="fa fa-question"></md-icon>
-            <span class="md-list-item-text"><li><router-link to="/Home/Conocenos">¿Por qué nosotros?</router-link></li></span>
-          </md-list-item>
-          <md-list-item>
-            <md-icon class="fas fa-bus-alt"></md-icon>
-            <span class="md-list-item-text">Servicios</span>
-          </md-list-item>
-          <md-list-item>
-            <md-icon>send</md-icon>
-            <span class="md-list-item-text">Contacto</span>
-          </md-list-item>
-        </md-list>
-      </md-app-drawer>
-
- <md-app-content>
-   
-   <div>
-                <router-view></router-view>
+  <div class="page-container">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <div class="Navbar">
+   <div class="Navbar__Link Navbar__Link-brand">
+      Website title
+    </div>
+    <div class="Navbar__Link Navbar__Link-toggle">
+      <i class="fas fa-bars" @click="classToggle"></i>
+    </div>
+  <nav class="Navbar__Items">
+    <div class="Navbar__Link">
+      Longer Link
+    </div>
+    <div class="Navbar__Link">
+      Longer Link
+    </div>
+    <div class="Navbar__Link">
+      Link
+    </div>
+  </nav>
+  <nav class="Navbar__Items Navbar__Items--right">
+    <div class="Navbar__Link">
+      Link
+    </div>
+    <div class="Navbar__Link">
+      Link
+    </div>
+  </nav>
+</div>
   </div>
- </md-app-content>
-    </md-app>
-  </div>
+
 </template>
 
 <script>
-
-
+  
+  export default {
+    name: 'PersistentMini',
+   
+    methods: {
+      classToggle () {
+  const navs = document.querySelectorAll('.Navbar__Items')
+  
+  navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow')); 
+     }
+    
+    }
+   
+  }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+html,body{margin:0}
+
+.page-container{
+max-width: 940px;
+  margin-top: -60px;
+  padding: 0 0 0 0%;
+  clear: both;
+}
+
+ .Navbar {
+  background-color: #46ACC2;
+  display: flex;
+  padding: 16px;
+  font-family: sans-serif;
+  color: white;
+}
+.Navbar__Link {
+  padding-right: 8px;
+}
+.Navbar__Items {
+  display: flex;
+}
+.Navbar__Items--right {
+  margin-left:auto;
+}
+.Navbar__Link-toggle {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .Navbar__Items,
+  .Navbar {
+    flex-direction: column;
+  }
+.Navbar__Items {
+    display:none;
+  }
+.Navbar__Items--right {
+    margin-left:0;
+  }
+.Navbar__ToggleShow {
+    display: flex;
+  }
+.Navbar__Link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+   } 
+}
+   // Demo purposes only
   
 </style>
