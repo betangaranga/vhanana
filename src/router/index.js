@@ -2,7 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
 import Catalogo from '@/components/Catalogo'
-import Conocenos from '@/components/Conocenos'
+import Servicios from '@/components/Servicios'
+import Contactanos from '@/components/Contactanos'
+
 Vue.use(Router)
 
 let router= new Router({
@@ -23,8 +25,13 @@ let router= new Router({
         component: Catalogo
       },
       {
-        path:"Conocenos",
-        component:Conocenos
+        path:"Servicios",
+        component:Servicios
+
+      },
+      {
+        path:"Contactanos",
+        component:Contactanos
 
       }
 
