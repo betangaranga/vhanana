@@ -1,61 +1,101 @@
 <template>
-    <div class="conocenos_container">
-     <div class="container-contact2">
-        <h1 id="nuestra_mision-title">Nuestra Mision</h1>
-        <p id="mision">Ser una empresa de  transporte terrestre que de manera segura y eficiente proporcione para sus clientes servicios de calidad, con rentabilidad y en armonía con nuestros colaboradores, la comunidad y el medioambiente.</p>
+  <div class="conocenos_container">
+    <div class="container-contact3">
+        <div class="mision">
+      <h1 id="mision_title"> Misión</h1>
+      <p id="mision">Ser una empresa de  transporte terrestre que de manera segura y eficiente proporcione para sus
+        clientes servicios de calidad, con rentabilidad y en armonía con nuestros colaboradores, la comunidad y el
+        medioambiente.</p>
         </div>
-        
+        <div class="vision">
+      <h1 id="vision_title"> Visión</h1>
+      <p id="vision">Convertirse en la empresa líder de la industria del transporte terrestre logrando una mayor
+        calidad en todos nuestros servicios, propiciando confianza y permanencia en nuestros clientes, satisfacción y
+        orgullo para quienes la integramos, respetando siempre el entorno social.</p>
+</div>
+
     </div>
+    
+  </div>
+  
 </template>
 <script>
-export default {
-    
-}
+  export default {
+
+  }
 </script>
 <style lang="scss" scoped>
-.conocenos_container{
+  .conocenos_container {
     width: 100%;
-    height: 58em;
+    height: 65em;
     padding: 15px;
     background: #198C19;
     background: -webkit-linear-gradient(left, #198C19, #32cd32);
     background: -o-linear-gradient(left, #198C19, #32cd32);
     background: -moz-linear-gradient(left, #198C19, #32cd32);
     background: linear-gradient(left, #198C19, #32cd32);
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-.container-contact2 {
-    width: 100%;
-    height: 40%;
+
+  }
+
+  .container-contact3 {
+    width: 80%;
+    height: 90%;
     background: white;
     border-radius: 10px;
-    overflow: hidden;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 130px 88px 148px;
-    position: relative;
-    top: -30%;
-   
+    margin: auto;
   }
-  #nuestra_mision-title{
-width:100%;
+
+  h1 {
+    text-align: center;
+    padding-top: .5em;
   }
-  #mision{
-      text-align: center;
+
+  p {
+    text-align: center;
+    width: 100%;
+    text-align: justify;
+    padding: 1em;
+}
+.mision{
+animation-duration: 3s;
+animation-name: mision;
+}
+.vision{
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-name: vision;
+     animation-fill-mode: both;
+
+  }
+
+  @keyframes mision {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+
+    to {
+      margin-left: 0%;
       width: 100%;
-      text-align: justify;
+    }
+  }
+
+  @keyframes vision {
+
+    from {
+      margin-left: 130%;
+      width: 400%
+    }
+
+    to {
+      margin-left: 0%;
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  @media (max-width: 768px) {
+    .container-contact3 {
+      height: 40em;
+    }
   }
 </style>
