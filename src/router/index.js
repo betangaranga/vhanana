@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import Catalogo from '@/components/Catalogo'
 import Servicios from '@/components/Servicios'
 import Contactanos from '@/components/Contactanos'
+import Conocenos from '@/components/Conocenos'
 
 Vue.use(Router)
 
@@ -33,6 +34,10 @@ let router= new Router({
         path:"Contactanos",
         component:Contactanos
 
+      },
+      {
+        path:"Conocenos",
+        component:Conocenos
       }
 
     ]

@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <div class="Navbar">
    <div class="Navbar__Link Navbar__Link-brand">
-      <b> Transportadora Vhanana </b>
+      <b> Transportadora VHANANA </b>
     </div>
     <div class="Navbar__Link Navbar__Link-toggle">
       <i class="fas fa-bars" @click="classToggle"></i>
@@ -20,7 +20,7 @@
     </div>
     <div class="Navbar__Link">
              <i class="fas fa-fingerprint"></i>
-      <a><router-link to="/Home/Servicios">Quienes somos</router-link></a>
+      <a><router-link to="/Home/Conocenos">Quienes somos</router-link></a>
     </div>
   </nav>
   <nav class="Navbar__Items Navbar__Items--right">
@@ -28,11 +28,7 @@
              <i class="fas fa-envelope-open"></i>
       <a><router-link to="/Home/Contactanos">Contactanos</router-link></a>
     </div>
-     <div class="Navbar__Link">
-<i class="fas fa-location-arrow"></i>
-      <a><router-link to="/Home/Contactanos">Ubicacion</router-link></a>
     
-</div>
 
   </nav>
 </div>
