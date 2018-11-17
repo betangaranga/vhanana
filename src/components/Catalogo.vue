@@ -1,17 +1,27 @@
 <template>
 
   <div id="app">
-  <modal name="imagenes" :width="800"
-         :height="100" pivotY	=".9"  >
-    <img id="imagen_carros" v-for="sub in hola" v-bind:src="sub.src"  alt="que">
+  <modal  name="imagenes" :width="600"
+         :height="750" pivotY	=".5"  >
+         <div class="info_carros">
+          <div class="imagen_grande">
+            <img id="imagen_grande" v-bind:src="imagen_grande" alt="">
+
+          </div>
+
+           <div id="info_carros">
+             <h3>{{titulo}}</h3>
+           </div>
+<div class="subimagenes_carros">
+  <img id="subimagenes_carros" v-for="(sub,index) in sub_imagenes" v-bind:src="sub.src" alt="sin imagen" @click="cambiar(index)">
+</div>
+         </div>
 
 </modal>
-    <p>Nuestras Unidades</p>
-<div v-for= "(image,index) in images" id="car">
-  <img id="imagen_carros"v-bind:src="image.src" @click="show(index)" alt="">
-<div class="informacion">
-<p>{{image.info}}</p>
-</div>
+    <h2>Nuestras Unidades</h2>
+<div>
+  <img id="imagen_carros" v-for="(image,index) in images" v-bind:src="image.src" @click="show(index)" alt="">
+
 </div>
   </div>
 </template>
@@ -22,7 +32,10 @@
   
     data(){
         return{
-          hola:"",
+          index_img:"",
+          imagen_grande:"",
+          sub_imagenes:"",
+          titulo:"",
           images : [
 {
 src:'https://preview.ibb.co/mpTUNq/versa.jpg',
@@ -71,9 +84,15 @@ sub_images:[
   },
  show (index) {
     this.$modal.show('imagenes');
-    this.hola=this.images[index].sub_images
+    this.titulo=this.images[index].info;
+    this.sub_imagenes=this.images[index].sub_images;
+    this.imagen_grande=this.images[index].src;
+    this.index_img=index;
 
 
+  },
+  cambiar(index){
+    this.imagen_grande=this.images[this.index_img].sub_images[index].src
   },
   hide () {
     this.$modal.hide('imagenes');
@@ -82,26 +101,43 @@ sub_images:[
   }
 </script>
 <style scoped>
-
-#car{
-  border-style:ridge;
-  margin: 1em;
-  border-radius:1.5em;
+h3{
+  text-align: center;
+}
+.info_carros{
+  width: 100%;
+  height: 100%;
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 10px;
+  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(3,1fr);
+}
+#info_carros{
+  grid-row:1/3;
+  grid-column: 3/4;
+}
+.subimagenes_carros{
+    grid-row: 3;
+    grid-column: 1/4;
+}
+#subimagenes_carros{
+  width: 33%;
+  height: 100%;
+  padding: 1em;
+}
+.imagen_grande{
+  grid-row:1/3;
+  grid-column: 1/3;
+}
+#imagen_grande{
+  width: 90%;
+  height: 90%;
+  margin: 1em
 }
 #imagen_carros{
   width: 30em;
   height: 30em;
   margin: 2em;
 }
-.informacion{
-  border-style:solid;
-  grid-column-start: 2;
-  grid-column-end: 5;
-  margin: 2em;
-  
-}
+
 </style>
 
