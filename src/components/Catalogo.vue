@@ -1,8 +1,8 @@
 <template>
 
   <div id="app">
-  <modal  name="imagenes" :width="600"
-         :height="750" pivotY	=".5"  >
+  <modal  name="imagenes" :width="700"
+         :height="750" :pivotY	=".5" :draggable="true" :adaptive="true" >
          <div class="info_carros">
           <div class="imagen_grande">
             <img id="imagen_grande" v-bind:src="imagen_grande" alt="">
@@ -56,7 +56,10 @@ sub_images:[
   },
   {
     src:'https://preview.ibb.co/i1GuoV/camioneta3.jpg'
-  }
+  },
+  {
+    src:'https://preview.ibb.co/i1GuoV/camioneta3.jpg'
+  },
 ]
 },
 {

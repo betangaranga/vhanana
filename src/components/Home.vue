@@ -12,7 +12,7 @@
   <nav class="Navbar__Items">
     <div class="Navbar__Link">
             <i class="fas fa-car"></i>
-      <a><router-link to="/Home/Catalogo">Catalogo de unidades</router-link></a>
+      <a><router-link to="/Home/Productos">Catalogo de unidades</router-link></a>
     </div>
     <div class="Navbar__Link">
              <i class="fab fa-servicestack"></i>
@@ -78,6 +78,8 @@ max-width: 100%;
   font-family: sans-serif;
   color: white;
   font-family: 'Quicksand', sans-serif;
+  position: fixed;
+  width: 100%;
  
 
 }

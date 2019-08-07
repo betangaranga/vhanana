@@ -84,6 +84,8 @@ section {
   margin: 0 auto;
   text-align: center;
   padding: 30px;
+  position: relative;
+  top: 3em;
 }
 
 h3 {
@@ -202,6 +204,7 @@ h3 {
 @media all and (max-width:900px) {
   .service{
     height: 20em;
+    width: 50%
   }
   .services-grid {
     display: -webkit-box;

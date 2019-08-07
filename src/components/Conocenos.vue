@@ -55,37 +55,7 @@
     text-align: justify;
     padding: 1em;
 }
-.mision{
-animation-duration: 3s;
-animation-name: mision;
-}
-.vision{
-    animation-duration: 3s;
-    animation-delay: 3s;
-    animation-name: vision;
-     animation-fill-mode: both;
-  }
-  @keyframes mision {
-    from {
-      margin-left: 100%;
-      width: 300%
-    }
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
-  @keyframes vision {
-    from {
-      margin-left: 130%;
-      width: 400%
-    }
-    to {
-      margin-left: 0%;
-      width: 100%;
-      margin-top: 0;
-    }
-  }
+
   @media (max-width: 768px) {
     .container-contact3 {
       height: 40em;

@@ -5,10 +5,12 @@ import Catalogo from '@/components/Catalogo'
 import Servicios from '@/components/Servicios'
 import Contactanos from '@/components/Contactanos'
 import Conocenos from '@/components/Conocenos'
+import Productos from '@/components/Productos'
 
 Vue.use(Router)
 
 let router= new Router({
+  mode:"history",
   routes: [
     {
       path: '*',
@@ -38,6 +40,10 @@ let router= new Router({
       {
         path:"Conocenos",
         component:Conocenos
+      },
+      {
+        path:"Productos",
+        component:Productos
       }
 
     ]

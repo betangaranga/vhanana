@@ -338,6 +338,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    top: 3.72em
 
   }
 
@@ -572,7 +574,8 @@
     content: attr(data-validate);
     position: absolute;
     max-width: 70%;
-    background-color: white;
+    background-color: 
+    white;
     border: 1px solid #c80000;
     border-radius: 13px;
     padding: 4px 25px 4px 10px;
